@@ -39,6 +39,30 @@
             font-size: 0.95em;
             margin-top: 5px;
         }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(30, 30, 30, 0.9);
+            color: #fff;
+            padding: 10px;
+            font-size: 0.9em;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+
+        .image-container:hover .tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -47,12 +71,16 @@
         <div class="card">
             <img src="images/Sylvia.png" alt="Сильвия">
             <h2>Сильвия</h2>
-            <p>Святая, повелительница пространства. Обладает даром искажения реальности и перемещения между измерениями. Её прошлое покрыто тайной, но сила безгранична.</p>
+            <div class="tooltip">
+                Святая, повелительница пространства. Обладает даром искажения реальности и перемещения между измерениями. Её прошлое покрыто тайной, но сила безгранична.
+            </div>
         </div>
         <div class="card">
             <img src="images/Leon.png" alt="Леон">
             <h2>Леон</h2>
-            <p>20-летний сын главы могущественного конгломерата. Внешне — хладнокровный наследник, но в душе — идеалист, мечтающий изменить систему изнутри.</p>
+            <div class="tooltip">
+                20-летний сын главы могущественного конгломерата. Внешне — хладнокровный наследник, но в душе — идеалист, мечтающий изменить систему изнутри.
+            </div>
         </div>
         <div class="card">
             <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Аой">
