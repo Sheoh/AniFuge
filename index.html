@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея персонажей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: #2e2e3e;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .card h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #fdd835;
+        }
+        .card p {
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Галерея персонажей</h1>
+    <div class="gallery">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Сильвия">
+            <h2>Сильвия</h2>
+            <p>Святая, повелительница пространства. Обладает даром искажения реальности и перемещения между измерениями. Её прошлое покрыто тайной, но сила безгранична.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Леон">
+            <h2>Леон</h2>
+            <p>20-летний сын главы могущественного конгломерата. Внешне — хладнокровный наследник, но в душе — идеалист, мечтающий изменить систему изнутри.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Аой">
+            <h2>Аой</h2>
+            <p>Молчаливая девочка-ниндзя, владеющая теневыми техниками. Никто не знает её настоящего возраста или происхождения.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Каору">
+            <h2>Каору</h2>
+            <p>Харизматичный лидер повстанцев, выступающий против тирании. Обладает способностью внушать доверие и объединять людей.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Мирай">
+            <h2>Мирай</h2>
+            <p>Механик-гений с искусственным глазом, способным анализировать будущее. Обожает кошек и чинит всё, что сломано — даже людей.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x400?text=Character+Image" alt="Хадзуки">
+            <h2>Хадзуки</h2>
+            <p>Бывшая охотница на демонов, скрывающаяся среди простых людей. На её теле — древние печати, сдерживающие потустороннюю силу.</p>
+        </div>
+    </div>
+</body>
+</html>
