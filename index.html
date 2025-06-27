@@ -1,132 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Галерея персонажей</title>
-    <style>
-        body {
-            background-color: #1e1e2f;
-            color: white;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .card {
-            background-color: #2e2e3e;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 200px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .image-container {
-            position: relative;
-        }
-        .image-container img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        .tooltip {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(30, 30, 30, 0.9);
-            color: #fff;
-            padding: 10px;
-            font-size: 0.9em;
-            opacity: 0;
-            transform: translateY(100%);
-            transition: all 0.3s ease;
-        }
-        .image-container:hover .tooltip {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Галерея персонажей</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Галерея персонажей</h1>
-<div class="gallery">
+  <div id="loginBox">
+    <input type="text" id="username" placeholder="Введите имя" />
+    <button onclick="register()">Войти</button>
+  </div>
+  <div id="welcomeBox" style="display:none;">
+    Добро пожаловать, <span id="userDisplay"></span>!
+    <button onclick="logout()">Выйти</button>
+  </div>
 
+  <div class="gallery">
     <div class="card">
-        <a href="silvia.html">
-            <div class="image-container">
-                <img src="images/Sylvia.png" alt="Сильвия">
-                <div class="tooltip">Святая, повелительница пространства</div>
-            </div>
-            <h2>Сильвия</h2>
-        </a>
+      <div class="image-container">
+        <img src="images/placeholder.jpg" alt="Сильвия" />
+        <div class="tooltip">Сильвия — святая, повелительница пространства.</div>
+      </div>
+      <div class="name">Сильвия</div>
     </div>
-    
     <div class="card">
-        <a href="leon.html">
-            <div class="image-container">
-                <img src="images/Leon.png" alt="Леон">
-                <div class="tooltip">20-летний сын главы могущественного конгломерата</div>
-            </div>
-            <h2>Леон</h2>
-        </a>
+      <div class="image-container">
+        <img src="images/placeholder.jpg" alt="Леон" />
+        <div class="tooltip">Леон — 20-летний сын главы конгломерата.</div>
+      </div>
+      <div class="name">Леон</div>
     </div>
-    
-    <div class="card">
-        <a href="aoi.html">
-            <div class="image-container">
-                <img src="images/placeholder.jpg" alt="Аой">
-                <div class="tooltip">Молчаливая девочка-ниндзя, владеющая теневыми техниками</div>
-            </div>
-            <h2>Аой</h2>
-        </a>
+  </div>
+
+  <div id="ageModal" class="modal">
+    <div class="modal-content">
+      <h2>Внимание</h2>
+      <p>Сайт содержит контент для лиц старше 18 лет. Вам есть 18?</p>
+      <button onclick="acceptAge()">Да</button>
+      <button onclick="denyAge()">Нет</button>
     </div>
-    
-    <div class="card">
-        <a href="rina.html">
-            <div class="image-container">
-                <img src="images/placeholder.jpg" alt="Рина">
-                <div class="tooltip">Весёлая волшебница, способная управлять стихиями</div>
-            </div>
-            <h2>Рина</h2>
-        </a>
-    </div>
-    
-    <div class="card">
-        <a href="zero.html">
-            <div class="image-container">
-                <img src="images/placeholder.jpg" alt="Зеро">
-                <div class="tooltip">Холодный киберсамурай с запретным прошлым</div>
-            </div>
-            <h2>Зеро</h2>
-        </a>
-    </div>
-    
-    <div class="card">
-        <a href="maya.html">
-            <div class="image-container">
-                <img src="images/placeholder.jpg" alt="Майя">
-                <div class="tooltip">Загадочная колдунья, читающая судьбу по звёздам</div>
-            </div>
-            <h2>Майя</h2>
-        </a>
-    </div>
-    
-</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
